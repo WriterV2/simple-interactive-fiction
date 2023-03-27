@@ -1,4 +1,4 @@
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 
 // list of all nodes
 #[derive(Debug, Deserialize)]
@@ -19,8 +19,8 @@ struct DecisionOptions(Vec<DecisionOption>);
 // id of the node this option should lead to and description for this option
 #[derive(Debug, Deserialize)]
 struct DecisionOption {
-    id: u32,
-    text: String,
+    target_id: u32,
+    description: String,
 }
 
 impl Story {
